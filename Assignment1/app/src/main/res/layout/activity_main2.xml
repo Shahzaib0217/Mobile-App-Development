@@ -24,14 +24,20 @@
     <LinearLayout
         android:layout_width="120dp"
         android:layout_height="270dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="290dp"
+        android:layout_marginBottom="311dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="150dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/button4"
             android:layout_width="134dp"
-            android:layout_height="wrap_content"
+            android:layout_height="132dp"
             android:layout_weight="1"
             android:drawableTop="@drawable/bedroom_svg"
             android:text="Bedroom" />
@@ -46,11 +52,18 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="135dp"
         android:layout_height="270dp"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="311dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="150dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/button8"
@@ -73,14 +86,19 @@
     <LinearLayout
         android:layout_width="135dp"
         android:layout_height="270dp"
+        android:layout_marginStart="282dp"
+        android:layout_marginTop="149dp"
+        android:layout_marginBottom="312dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="282dp"
-        tools:layout_editor_absoluteY="149dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/button9"
             android:layout_width="match_parent"
-            android:layout_height="126dp"
+            android:layout_height="129dp"
             android:layout_weight="1"
             android:drawableTop="@drawable/kitchen_svg"
             android:text="KITCHEN"
@@ -99,19 +117,82 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="____________________________________________________________"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="11dp"
+        android:text="_________________________________________"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="452dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <Switch
-        android:id="@+id/switch2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textOff="OFF"
-        android:textOn="ON"
-        tools:layout_editor_absoluteX="289dp"
-        tools:layout_editor_absoluteY="528dp" />
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="409dp"
+        android:layout_height="54dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.139"
+        tools:layout_editor_absoluteX="1dp">
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="40dp"
+            android:layout_weight="1"
+            android:text="Light Control"
+            android:drawableLeft="@drawable/bulb_svg"
+            />
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:showText="true"
+            android:textOff="OFF"
+            android:textOn="ON"
+            android:layout_marginRight="25dp"
+            android:thumb="@drawable/switch_btn"
+            android:track="@drawable/track" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="401dp"
+        android:layout_height="53dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.172"
+        tools:layout_editor_absoluteX="1dp">
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="wrap_content"
+            android:layout_height="67dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="40dp"
+            android:layout_weight="1"
+            android:text="Power Supply"
+            android:drawableLeft="@drawable/plug_svg"
+            tools:layout_editor_absoluteX="320dp"
+            tools:layout_editor_absoluteY="650dp" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:showText="true"
+            android:textOff="OFF"
+            android:textOn="ON"
+            android:layout_marginRight="15dp"
+            android:thumb="@drawable/switch_btn"
+            android:track="@drawable/track"
+            tools:layout_editor_absoluteX="146dp"
+            tools:layout_editor_absoluteY="650dp" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
