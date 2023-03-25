@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Smd_lab"
         tools:targetApi="31">
         <activity
-            android:name=".ListViewExamples.ListViewExample1"
+            android:name=".ListViewExamples.ImageAndTextExample"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SharedPreferenceExample.SharedPreferenceExample1"
+            android:name=".ListViewExamples.MultiColumnListViewExample"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,27 +29,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ListViewExamples.ListViewExample1"
+            android:exported="true"></activity>
+        <activity
+            android:name=".SharedPreferenceExample.SharedPreferenceExample1"
+            android:exported="true"></activity>
         <activity
             android:name=".Intent_examples.Second_Activity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".Intent_examples.IntentExampleCaptureImage"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

@@ -2,12 +2,12 @@ package com.example.a20f_1079_task2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -44,24 +44,26 @@ public class MainActivity extends AppCompatActivity {
         editor.commit();
 
         Toast.makeText(this, "Preferences Saved :)", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        String a = sharedPreferences.getString("A",null);
-        String b =sharedPreferences.getString("B",null);
-        String c=sharedPreferences.getString("C",null);
-        String d=sharedPreferences.getString("D",null);
-        String e=sharedPreferences.getString("E",null);
-        ArrayList<String> myNameList=new ArrayList<>();
-        myNameList.add(a);
-        myNameList.add(b);
-        myNameList.add(c);
-        myNameList.add(d);
-        myNameList.add(e);
-
-//        ArrayAdapter<String> myAdapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,myNameList);
-    }
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//
+//        String a = sharedPreferences.getString("A",null);
+//        String b =sharedPreferences.getString("B",null);
+//        String c=sharedPreferences.getString("C",null);
+//        String d=sharedPreferences.getString("D",null);
+//        String e=sharedPreferences.getString("E",null);
+//        ArrayList<String> myNameList=new ArrayList<>();
+//        myNameList.add(a);
+//        myNameList.add(b);
+//        myNameList.add(c);
+//        myNameList.add(d);
+//        myNameList.add(e);
+//
+////        ArrayAdapter<String> myAdapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,myNameList);
+//    }
 }
